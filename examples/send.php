@@ -11,12 +11,12 @@
     //  * * * * * * *
     //
     //  The 'send' action also encompasses the functionality of the 'optin' action if the recipient
-    //  is NOT opted into 
+    //  is NOT opted into the keyword
     //
     //  Unlike the 'optin' action, the recipient will receive the originally intended txt
     //  and NOT the opt-in incentive / standard return message from your account
     //
-    //  Please examine the 'optin' action to understand how it operates
+    //  See the 'optin' action to understand how it operates
     //
     //  * * * * * * *
     //
