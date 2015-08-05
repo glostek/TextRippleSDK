@@ -3,7 +3,7 @@
 	/**
 	 *	TextRipple API SDK Class
 	 *
-	 *  Copyright 2015 Keith Gloster
+	 * 	Copyright 2015 Keith Gloster
 	 * 
 	 *  Licensed under the Apache License, Version 2.0 (the "License");
 	 *  you may not use this file except in compliance with the License.
