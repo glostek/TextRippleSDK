@@ -24,7 +24,7 @@
     $tr = new TextRipple();
 
 
-    // Perform optin action and echo json response
+    // Perform action and echo json response
     $phoneinfo = $tr->phoneinfo('8885551212');
     echo $phoneinfo;
 

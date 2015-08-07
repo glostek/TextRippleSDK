@@ -36,14 +36,14 @@
     $tr = new TextRipple();
 
 
-    // Perform send action and echo json response
+    // Perform action and echo json response
     // Max length of txt is 120 characters because the subject line is included from the account
     // SMS received: "[Business Name]: Hello there. Just a simple text message."
     $send = $tr->send("8885551212", "Hello there. Just a simple text message.");
     echo $send;
 
 
-    // Perform send action and echo json response
+    // Perform action and echo json response
     // Max length of txt is 160 characters because the subject line is NOT included
     // SMS received: "Hello there. Just a simple text message."
     $send = $tr->send("8885551212", "Hello there. Just a simple text message.", "", false);

@@ -38,7 +38,7 @@
     $tr = new TextRipple();
 
 
-    // Perform optin action and echo json response
+    // Perform action and echo json response
     $optin = $tr->optin("8885551212");
     echo $optin;
     

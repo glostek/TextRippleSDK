@@ -44,7 +44,7 @@
     $tr = new TextRipple();
 
 
-    // Perform optin action and echo json response
+    // Perform action and echo json response
     $ipush = $tr->ipush('8885551212', array(
         'firstname' => 'Fred',
         'lastname'  => 'Flintstone'

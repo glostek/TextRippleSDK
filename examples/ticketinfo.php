@@ -23,7 +23,7 @@
     $tr = new TextRipple();
 
 
-    // Perform optin action and echo json response
+    // Perform action and echo json response
     $ticketinfo = $tr->ticketinfo('AAAA-BBBB-CCCC-DDDD');
     echo $ticketinfo;
 

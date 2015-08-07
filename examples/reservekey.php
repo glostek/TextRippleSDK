@@ -26,7 +26,7 @@
     $tr = new TextRipple();
 
 
-    // Perform optin action and echo json response
+    // Perform action and echo json response
     $reservekey = $tr->reservekey('someword', 'Business Name');
     echo $reservekey;
 

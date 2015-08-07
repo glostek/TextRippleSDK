@@ -23,7 +23,7 @@
     $tr = new TextRipple();
 
 
-    // Perform optin action and echo json response
+    // Perform action and echo json response
     $keywordavailability = $tr->keywordavailability('someword');
     echo $keywordavailability;
 
