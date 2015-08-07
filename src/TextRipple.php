@@ -191,7 +191,7 @@
          *  Update information stored for phone number
          *
          *  @param String $phn (required) U.S. phone number 10 digits
-         *  @param String $arr (required) sets/resets information
+         *  @param Array  $arr (required) sets/resets information
          *  @param String $key (optional)
          */
         public function ipush($phn="", $arr=array(), $key="") {
@@ -279,6 +279,27 @@
                 "act" => "reservekey",
                 "key" => $key,
                 "sbj" => $sbj
+            );
+
+            self::call($data);
+
+            return $this->res;
+        }
+
+
+        // ----------------------------------------------------------------------------------------
+
+
+        /**
+         *  Remove keyword
+         *
+         *  @param String $key (required)
+         */
+        public function removekey($key="") {
+
+            $data = array(
+                "act" => "removekey",
+                "key" => $key
             );
 
             self::call($data);
