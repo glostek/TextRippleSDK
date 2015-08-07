@@ -6,7 +6,7 @@
     //
     //  * * * * * * *
     //
-    //  Check if a keyword is available
+    //  Check if a keyword is available/ownership
     //
     //  * * * * * * *
     //

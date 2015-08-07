@@ -6,7 +6,7 @@
     //
     //  * * * * * * *
     //
-    //  Removes a keyword from your account and archive any existing opt-ins
+    //  Get all live phone numbers and demographic information for a keyword
     //
     //  * * * * * * *
     //
