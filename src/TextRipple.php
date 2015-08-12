@@ -125,6 +125,33 @@
 
 
         /**
+         *  Opt out of a text club
+         *
+         *  @param String $phn (required) U.S. phone number 10 digits
+         *  @param String $key (optional)
+         */
+        public function optout($phn="", $key="") {
+
+            if ($key == "") {
+                $key = $this->key;
+            }
+
+            $data = array(
+                "act" => "optout",
+                "phn" => $phn,
+                "key" => $key
+            );
+
+            self::call($data);
+
+            return $this->res;
+        }
+
+
+        // ----------------------------------------------------------------------------------------
+
+
+        /**
          *  Send Text Message
          *
          *  @param String $phn (required) U.S. phone number 10 digits
