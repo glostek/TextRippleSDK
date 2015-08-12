@@ -30,7 +30,7 @@
 
 
     // Perform action and echo json response
-    $optin = $tr->optout("8885551212");
-    echo $optin;
+    $optout = $tr->optout("8885551212");
+    echo $optout;
     
 ?>
