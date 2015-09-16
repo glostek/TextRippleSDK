@@ -1,5 +1,7 @@
 <?php
 
+    error_reporting(E_ALL);
+
     /**
      *  TextRipple API SDK Class
      *
@@ -406,6 +408,108 @@
         }
 
 
+        // ----------------------------------------------------------------------------------------
+
+
+        /**
+         *  Retrieve incentive message
+         *
+         *  @param String $key (optional) 
+         */
+        public function getincentive($key="") {
+
+            if ($key == "") {
+                $key = $this->key;
+            }
+
+            $data = array(
+                "act" => "getincentive",
+                "key" => $key
+            );
+
+            self::call($data);
+
+            return $this->res;
+        }
+
+
+        // ----------------------------------------------------------------------------------------
+
+
+        /**
+         *  Set the incentive message
+         *
+         *  @param String $key (optional) 
+         */
+        public function setincentive($txt="", $key="") {
+
+            if ($key == "") {
+                $key = $this->key;
+            }
+
+            $data = array(
+                "act" => "setincentive",
+                "txt" => $txt,
+                "key" => $key
+            );
+
+            self::call($data);
+
+            return $this->res;
+        }
+
+
+        // ----------------------------------------------------------------------------------------
+
+
+        /**
+         *  Retrieve standard message
+         *
+         *  @param String $key (optional) 
+         */
+        public function getmessage($key="") {
+
+            if ($key == "") {
+                $key = $this->key;
+            }
+
+            $data = array(
+                "act" => "getmessage",
+                "key" => $key
+            );
+
+            self::call($data);
+
+            return $this->res;
+        }
+
+
+        // ----------------------------------------------------------------------------------------
+
+
+        /**
+         *  Set the standard message
+         *
+         *  @param String $key (optional) 
+         */
+        public function setmessage($txt="", $key="") {
+
+            if ($key == "") {
+                $key = $this->key;
+            }
+
+            $data = array(
+                "act" => "setmessage",
+                "txt" => $txt,
+                "key" => $key
+            );
+
+            self::call($data);
+
+            return $this->res;
+        }
+
+
 
         ///////////////////////////////////////////////////////////////////////////////////////////
         //
@@ -419,7 +523,6 @@
          *  @param Array $data (required)
          */
         private function call($data=array()) {
-
             $this->err = "";
             $url = "https://{$this->cid}:{$this->sec}@gateway.textripple.com/api-v3/";
             $curl = curl_init();
