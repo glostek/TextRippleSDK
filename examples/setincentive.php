@@ -8,7 +8,7 @@
     //
     //  Set opt-in incentive text message.
     //  The opt-in incentive text message is what people receive when opting into a text club.
-    //  The opt-in incentive text message should could an offer to attract enrollment
+    //  The opt-in incentive text message should contain an offer to attract enrollment
     //
     //  * * * * * * *
     //
