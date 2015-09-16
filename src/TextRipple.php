@@ -437,6 +437,7 @@
         /**
          *  Set the incentive message
          *
+         *  @param String $txt
          *  @param String $key (optional) 
          */
         public function setincentive($txt="", $key="") {
@@ -488,6 +489,7 @@
         /**
          *  Set the standard message
          *
+         *  @param String $txt
          *  @param String $key (optional) 
          */
         public function setmessage($txt="", $key="") {
