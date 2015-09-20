@@ -387,9 +387,11 @@
         /**
          *  Get optin and demographic information for each live member belonging to the keyword
          *
+         *  @param Date   $beg (YYYY-MM-DD)
+         *  @param Date   $end (YYYY-MM-DD)
          *  @param String $key (optional)
          */
-        public function members($key="") {
+        public function members($beg="", $end="", $key="") {
 
             if ($key == "") {
                 $key = $this->key;
@@ -397,7 +399,9 @@
 
             $data = array(
                 "act" => "members",
-                "key" => $key
+                "key" => $key,
+                "beg" => $beg,
+                "end" => $end
             );
 
             self::call($data);
