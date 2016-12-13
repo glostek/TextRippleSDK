@@ -125,6 +125,38 @@
 
 
         /**
+         *  Optin to a text club for widgets
+         *
+         *  @param String $phn (required) U.S. phone number 10 digits
+         *  @param Array  $arr (required) sets/resets information
+         *  @param String $key (optional)
+         */
+        public function woptin($phn="", $arr=array(), $key="") {
+
+            if ($key == "") {
+                $key = $this->key;
+            }
+
+            $data = array(
+                "act" => "woptin",
+                "phn" => $phn,
+                "key" => $key
+            );
+
+            foreach ($arr as $k => $v) {
+                $data[$k] = $v;
+            }
+
+            self::call($data);
+
+            return $this->res;
+        }
+
+
+        // ----------------------------------------------------------------------------------------
+
+
+        /**
          *  Opt out of a text club
          *
          *  @param String $phn (required) U.S. phone number 10 digits
@@ -529,6 +561,7 @@
         private function call($data=array()) {
             $this->err = "";
             $url = "https://{$this->cid}:{$this->sec}@gateway.textripple.com/api-v3/";
+            //$url = "http://{$this->cid}:{$this->sec}@localhost/gateway.textripple.com/api-v3/";
             $curl = curl_init();
             curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
